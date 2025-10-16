@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+# Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+
+# Video Files
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wmv
+
+# Model Files
+*.pt
+*.pth
+*.onnx
+*.pb
+*.h5
+*.pkl
+*.pickle
+
+# Large Data Folders
+input_videos/
+output_videos/
+models/
+stubs/
+
+# OS Files
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+
+# IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Temporary Files
+*.bak
+*.backup
