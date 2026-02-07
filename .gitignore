@@ -1,5 +1,6 @@
 # Python
 __pycache__/
+<<<<<<< HEAD
 *.py[cod]
 *$py.class
 *.so
@@ -28,10 +29,53 @@ ENV/
 .venv
 
 # IDE
+=======
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+# Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+
+# Video Files
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wmv
+
+# Model Files
+*.pt
+*.pth
+*.onnx
+*.pb
+*.h5
+*.pkl
+*.pickle
+
+# Large Data Folders
+input_videos/
+output_videos/
+models/
+stubs/
+
+# OS Files
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+
+# IDE Files
+>>>>>>> 187d1121d51dfdc2e5682cbdd5cccdd07690b538
 .vscode/
 .idea/
 *.swp
 *.swo
+<<<<<<< HEAD
 *~
 .DS_Store
 
@@ -44,11 +88,14 @@ models/*.onnx
 data/*
 !data/.gitkeep
 notebooks/.ipynb_checkpoints/
+=======
+>>>>>>> 187d1121d51dfdc2e5682cbdd5cccdd07690b538
 
 # Logs
 *.log
 logs/
 
+<<<<<<< HEAD
 # Jupyter
 .ipynb_checkpoints
 
@@ -59,3 +106,11 @@ htmlcov/
 
 # System
 Thumbs.db
+=======
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Temporary Files
+*.bak
+*.backup
+>>>>>>> 187d1121d51dfdc2e5682cbdd5cccdd07690b538
