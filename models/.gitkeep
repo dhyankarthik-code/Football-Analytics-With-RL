@@ -1,0 +1,3 @@
+# This file ensures the models/ directory is tracked by Git even when empty
+# Download YOLO model weights and place them here
+# Example: yolov8x.pt, yolov8x-pose.pt

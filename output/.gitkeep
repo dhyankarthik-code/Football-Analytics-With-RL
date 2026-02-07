@@ -1,0 +1,2 @@
+# This file ensures the output/ directory is tracked by Git even when empty
+# Analysis results, annotated videos, and reports will be saved here

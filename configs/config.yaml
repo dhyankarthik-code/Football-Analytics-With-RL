@@ -1,0 +1,49 @@
+project:
+  name: "FootballAnalytics_Pro"
+  version: "2.0.0"
+  output_dir: "output"
+  log_level: "INFO"
+  device: "auto" # auto, cuda:0, cpu
+
+detection:
+  model_path: "models/yolov8m.pt" # Default to Medium for RTX 3050 (fp16)
+  model_size: "m" # n, s, m, l, x
+  confidence_threshold: 0.5
+  iou_threshold: 0.45
+  img_size: 640
+  classes: [0, 32] # 0=person, 32=sports ball (COCO indices)
+
+tracking:
+  tracker_type: "bytetrack" # bytetrack (recommended) or deepsort
+  track_thresh: 0.5 # Detection confidence threshold for tracking
+  track_buffer: 30 # Frames to keep lost tracks
+  match_thresh: 0.8 # Matching threshold
+
+identification:
+  ocr_enabled: false
+  ocr_model_lang: "en"
+  team_cluster_method: "kmeans"
+  sampling_rate: 10 # Run OCR/Color every N frames per track
+  vote_buffer_size: 30 # Seconds/Frames to smooth ID results
+
+calibration:
+  pitch_length: 105
+  pitch_width: 68
+  keypoint_conf: 0.6
+
+events:
+  enabled: true
+  use_ml_pipeline: false # Use TimeSformer vs Rule-based
+  model_arch: "timesformer" # timesformer or cnn_lstm
+  sequence_length: 16 # Number of frames for event context
+  batch_size: 1 # Inference batch size (keep 1 for live stream)
+  threshold: 0.7 # Event detection confidence
+
+visualization:
+  show_video: true
+  save_video: true
+  draw_tracks: true
+  draw_ids: true
+  draw_team_color: true
+  draw_conf: false
+  heatmap_alpha: 0.6
